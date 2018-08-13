@@ -25,3 +25,34 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## All Topics
+   #### Bindings:
+   1) Output  Data:
+   
+     a) String Interpolation
+     
+           {{serverName}}
+           
+     b) Property binding
+     
+        <button class="btn btn-primary"    [disabled]="!allowEdit" (click)="onCreateServer()">Add Server</button>
+        
+   2)Event Binding:
+   
+     <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+     
+   3)Two Way Binding:
+   
+   
+   
+    <input type="text" class="form-control" [(ngModel)]="serverName">
+    
+    {{serverName}}
+    
+   #### Directives: 
+   1) ngIf:
+   
+   <p *ngIf="serverCreated; else noServer"> Server was created, Server name is {{serverName}}</p>
+   <ng-template #noServer> <p>No Server was created</p></ng-template>
+
